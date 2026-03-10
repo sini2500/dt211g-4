@@ -1,0 +1,162 @@
+@use '_base' as *;
+
+/* Header nav & menu */
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    background-color: darken($light-bg, 10%);
+    text-decoration: underline;
+  }
+
+}
+
+body.dark nav a {
+  &:hover {
+    background-color: darken($dark-bg, 10%);
+  }
+}
+
+.menu a {
+  padding: 4px 8px;
+  border-radius: 12px;
+}
+
+.logo a {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.menu {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+.burger {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+body.dark .burger {
+  color: $dark-text;
+}
+
+
+@include screensize(mobile) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    margin-top: 1rem;
+    position: absolute;
+    right: 2rem;
+    top: 4rem;
+    background-color: $light-bg;
+    border: 1px solid $light-text;
+    padding: 1rem;
+  }
+
+  body.dark .menu  {
+    background-color: $dark-bg;
+    border: 1px solid $dark-text;
+  }
+
+  .menu.show {
+    display: flex;
+  }
+
+  .burger {
+    display: block;
+  } 
+}
+
+#dark-toggle {
+  cursor: pointer;
+}
+
+
+/* voting area */
+
+.image-container {
+  display: flex;
+  gap: 3rem;
+  justify-content: start;
+  margin: 2rem 0;
+}
+
+@include screensize(mobile) {
+  .image-container {
+    flex-wrap:wrap;
+    gap: 1.5rem;
+  }
+}
+
+.vote-image {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 4px solid transparent;
+  transition: all 0.25s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &.selected {
+    border-color: blue;
+    transform: scale(1.05);
+  }
+}
+
+/* buttons */
+
+.btn {
+  padding: 0.5rem 1rem;
+  margin-right: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.75;
+  }
+}
+
+.btn-primary {
+  @extend .btn;
+  background-color: $light-bg;
+}
+
+body.dark .btn-primary {
+  background-color: $dark-bg;
+  color: $dark-text;
+  border-color: $dark-text;
+}
+
+
+/* results table */
+th, td {
+    padding: 0 0 8px;
+    text-align: left;
+}
+
+td {
+    img {
+        max-width:200px;
+
+    }
+    text-align: center;
+}
