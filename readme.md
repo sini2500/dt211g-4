@@ -12,12 +12,12 @@ Jag har valt att göra en enkel lista med knappar och klickbara bilder som demon
 
 SASS-koden finns uppdelad i flera filer under src/css/.
 
-Kod för animeringarna ligger i _components.scss.
+Kod för animeringarna ligger i _components.scss och animation.js.
 
 Exempel 1: En bild som snurrar när man klickar på den. Använder transform och transition.
 
 Exempel 2: En knapp som spelar upp en animation av en katt som tittar fram bakom knappen. Använder transform och transition.
 
-Exempel 3: En knapp som spelar upp en animation av en kapp som går över ett html-elements bredd. Använder keyframes.
+Exempel 3: En knapp som spelar upp en animation av en katt som springer över ett html-elements bredd. Använder keyframes.
 
 Exempel 4: Kod från tidigare uppgift, kattröstningen, använder också transform och transition för att göra vald bild större.
