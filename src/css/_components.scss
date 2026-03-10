@@ -160,3 +160,45 @@ td {
     }
     text-align: center;
 }
+
+/* animation demo */
+
+.anim-demo {
+  margin-bottom: 40px;
+}
+
+/* animation demo 1 */
+
+/* animation demo 2 */
+#demo2-run {
+  width: 240px;
+  height: 120px;
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
+}
+
+#demo2-container {
+  width: 480px;
+  height: 120px;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+}
+
+#demo2-cat {
+  position: absolute;
+  left: 120px;
+  bottom: 0;
+  transition: transform 0.5s ease;
+  z-index: 1;
+  width: 120px;
+}
+
+#demo2-container.show {
+  overflow: visible;
+}
+
+#demo2-container.show #demo2-cat {
+  transform: translateX(100%);
+}
