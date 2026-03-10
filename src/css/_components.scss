@@ -161,13 +161,29 @@ td {
     text-align: center;
 }
 
-/* animation demo */
+/* animation demo area */
 
 .anim-demo {
   margin-bottom: 40px;
 }
 
 /* animation demo 1 */
+#demo1-run {
+  width: 240px;
+  height: 120px;
+  cursor: pointer;
+}
+
+#demo1-container {
+  width: 480px;
+  height: 120px;
+  display: flex;
+}
+
+#demo1-cat {
+  width: 120px;
+  transition: transform 0.5s ease;
+}
 
 /* animation demo 2 */
 #demo2-run {
@@ -202,3 +218,5 @@ td {
 #demo2-container.show #demo2-cat {
   transform: translateX(100%);
 }
+
+/* animation demo 3 */

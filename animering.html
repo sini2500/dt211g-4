@@ -33,16 +33,19 @@
 
   <main class="container">
     <h1>Animering av html-element</h1>
-    <p>Beskrivning av sidan här...</p>
+    <p>Här är några exempel på transition, transform och keyframes.</p>
 
     <section class="anim-demo">
-      <h2>Exempel 1</h2>
-      <p>Beskrivning av exemplet här...</p>
-      <div class="anime-content">
-        innehållet hamnar här
+      <h2>Exempel 1: Katter som snurrar</h2>
+      <p>Knappen kör en javascript-funktion som justerar bildens style.transform attribut.<br>Eftersom bilden ska snurra används transform:rotate(xx deg)<br>Rörelsen tar 0.5 sekunder p.g.a bildens transition-regel.</p>
+
+      <div id="demo1-container">
+        <button id="demo1-run">Snurra katterna</button>
+        <img src="/src/img/circle-cats.png" id="demo1-cat" alt="Katter som snurrar">
       </div>
+
     </section>
-    
+
     <section class="anim-demo">
       <h2>Exempel 2: Katt som kikar fram</h2>
       <p>Bilden på katten ligger bakom knappen i z-index. Knappen lägger till en "show" css-klass på elementet.<br>Detta utlöser en transform: translateX(100%); så bilden rör sig sin hela bredd åt höger.<br>Behållaren får även overflow:visible; så kattens öron inte klipps av.<br>Rörelsen tar 0.5 sekunder p.g.a bildens transition-regel.<br>Efter 2 sekunder tas "show" bort, katten glider tillbaka och overflow är hidden igen.</p>
@@ -60,12 +63,10 @@
         innehållet hamnar här
       </div>
     </section>
+
     <section class="anim-demo">
-      <h2>Exempel 4</h2>
-      <p>Beskrivning av exemplet här...</p>
-      <div class="anim-content">
-        innehållet hamnar här
-      </div>
+      <h2>Exempel 4: Tidigare användning</h2>
+      <p>På sidan "Lab 3" använde jag transform för att öka skalan på bildena när de klickas eller muspekaren är över dem.</p>
     </section>
 
   </main>
