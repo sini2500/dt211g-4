@@ -8,7 +8,7 @@ Webbplatsen är publicerad på Netlify: https://dt211g-4-sini2500.netlify.app/
 
 Lab 4 går ut på att använda SCSS och css-verktyg for grafiska effekter.
 
-Jag har valt att göra en enkel lista med knappar och klickbara bilder som demonstrerar olika effekter.
+Jag har valt att göra en rad exempel med knappar som demonstrerar olika effekter.
 
 SASS-koden finns uppdelad i flera filer under src/css/.
 
