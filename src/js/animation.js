@@ -27,3 +27,18 @@ btn2.addEventListener("click", () => {
 });
 
 /* animation demo 3 */
+
+const btn3 = document.getElementById("demo3-run");
+const cat3 = document.getElementById("demo3-cat");
+
+btn3.addEventListener("click", () => {
+
+  cat3.classList.remove("idle");
+  cat3.classList.add("run");
+
+  setTimeout(() => {
+    cat3.classList.remove("run");
+    cat3.classList.add("idle");
+  }, 4000);
+
+});

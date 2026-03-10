@@ -33,7 +33,7 @@
 
   <main class="container">
     <h1>Animering av html-element</h1>
-    <p>Här är några exempel på transition, transform och keyframes.</p>
+    <p>Här är några exempel på transition, transform och keyframes.<br>Jag valde att bara arbeta med bilder eftersom det låter mig behålla katt-temat.</p>
 
     <section class="anim-demo">
       <h2>Exempel 1: Katter som snurrar</h2>
@@ -56,17 +56,23 @@
       </div>
 
     </section>
+
     <section class="anim-demo">
-      <h2>Exempel 3</h2>
-      <p>Beskrivning av exemplet här...</p>
-      <div class="anim-content">
-        innehållet hamnar här
+      <h2>Exempel 3: Katt som springer</h2>
+      <p>Den här demon använder keyframes för att flytta katt-elementet och dess bakgrundsbild.<br>Jag hittade två gratis spritesheets med en väntande och en springande rörelse.<br>Javascript används för att byta css-klasser på kattens element när knappen trycks.<br>Två keyframes-regler används för att flytta bakgrundsbilden till rätt plats, så animeringen byter bild, beroende på om katten väntar eller springer. En tredje keyframes-regel flyttar katt-elementet åt höger inom behållaren.<br>Animeringen tar 4 sekunder oavsett skärmstorlek och behållarens bredd är dynamisk med flex-grow.<br>Skillnad i elementets bredd leder till att det ser ut som att katten springer snabbare på större skärmar.</p>
+
+      <div id="demo3-container">
+        <button id="demo3-run">Skicka iväg katten</button>
+        <div id="demo3-area">
+          <div id="demo3-cat" class="idle"></div>
+        </div>
       </div>
+
     </section>
 
     <section class="anim-demo">
       <h2>Exempel 4: Tidigare användning</h2>
-      <p>På sidan "Lab 3" använde jag transform för att öka skalan på bildena när de klickas eller muspekaren är över dem.</p>
+      <p>På sidan "Lab 3" använde jag transform för att öka skalan på bildena när de klickas eller vid hover.</p>
     </section>
 
   </main>
